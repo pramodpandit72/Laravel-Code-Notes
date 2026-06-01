@@ -8,5 +8,7 @@
 
 <a href='/about1/about2/about3' class="underline">About</a>
 <a href="{{ route('cont') }}" class="underline">Contact</a>
+<a href="{{ url('/dashboard') }}" class="underline">Dashboard</a>
+<a href="{{ action([App\Http\Controllers\ActionController::class, 'index']) }}" class="underline">Action</a>
 
 @endsection

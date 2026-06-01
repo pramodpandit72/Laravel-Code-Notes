@@ -174,3 +174,38 @@ Route::get('/user/{id}', function ($id) {
 Route::get('/test3', function () {
     return url('/home');
 });
+
+// Asset URL
+Route::get('/asset', function() {
+    return view('AssetUrl');
+});
+
+// Action
+use App\Http\Controllers\ActionController;
+Route::get('/action', [ActionController::class, 'index']);
+
+// Passing Parameter to the route
+Route::get('/post/{id}/{name}', function($id, $name) {
+    return $id . " " . $name;
+});
+
+// Passing views to the route
+Route::get('/dashboard', function() {
+    return view('Dashboard');
+});
+
+// Passing Data to Views
+
+Route::get('/profile', function() {
+    // Using with()
+    // return view('Profile')->with('name', 'Rahul');
+
+    // Using Array
+    // return view('profile', ['name' => 'Rahul', 'age' => 20]);
+
+    // Using compact()
+    $name = "Rahul";
+    $age = 20;
+    return view('profile', compact('name','age'));
+
+});
