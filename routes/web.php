@@ -209,3 +209,27 @@ Route::get('/profile', function() {
     return view('profile', compact('name','age'));
 
 });
+
+// Attaching Headers
+Route::get('/header', function() {
+    return response('Hello')
+    ->header('Content-Type', 'text/plain');
+});
+
+// Attaching Cookies
+Route::get('/cookie1', function() {
+    return response("Cookie Set") 
+    ->cookie('name', 'Rahul', 60);
+});
+
+// JSON Response
+Route::get('/json', function() {
+    return response()->json(['name' => 'Rahul', 'age' => 20]);
+});
+
+// Laravel Redirections
+Route::get('/redirect', function () {
+    return redirect('home');
+});
+
+// Redirecting to Named Routes
