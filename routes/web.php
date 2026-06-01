@@ -233,3 +233,16 @@ Route::get('/redirect', function () {
 });
 
 // Redirecting to Named Routes
+Route::get('/chat', function() {
+    return "Chat Page";
+})->name('chat');
+Route::get('go-chat', function() {
+    return redirect()->route('chat');
+});
+
+// Redirecting to Controller Actions
+use App\Http\Controllers\RedirectControllerAction;
+Route::get('/con', [RedirectControllerAction::class, 'index']);
+Route::get('/go-con', function() {
+    return redirect()->action([RedirectControllerAction::class, 'index']);
+});
