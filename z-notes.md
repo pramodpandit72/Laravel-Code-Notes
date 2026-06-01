@@ -13,3 +13,5 @@ Group	Multiple routes together
 1. with() → single data
 2. array [] → multiple data
 3. compact() → best & clean way
+
+# vendor -> Installed packages (via Composer)
