@@ -8,6 +8,6 @@ class RedirectControllerAction extends Controller
 {
     public function index()
     {
-        return "User Page";
+        return "Welcome to Controller Action";
     }
 }
