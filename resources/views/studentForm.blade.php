@@ -3,7 +3,7 @@
 @section('content')
 
 
-<form action="/student-submit" method="POST">
+<form action="/submit-form" method="POST">
 
     @csrf
 

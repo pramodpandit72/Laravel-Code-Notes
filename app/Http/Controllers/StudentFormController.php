@@ -19,7 +19,7 @@ class StudentFormController extends Controller
             'course' => 'required'
         ], 
         [  // custom error messages
-            "name.min"=>"Minimum 2 character allowed",
+            "name.min"=>"Minimum 3 character allowed",
             "name.max"=>"You are not allowed to enter characters above length 20",
             "name.regex"=>"Only charcters and spaces allowed",
             "password.regex"=>"Password must contain at least one capital, one numeric, one special character",
