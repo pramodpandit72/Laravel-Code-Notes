@@ -68,7 +68,7 @@ Route::get('/local', function (){
 });
 
 
-// Emsil Sending Route
+// Email Sending Route
 Route::get('/send-mail', [SendEmail::class, 'send']);
 
 // File Uploading Route

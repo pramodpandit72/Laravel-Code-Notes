@@ -1,6 +1,6 @@
-@extends('layout.app')
+{{-- @extends('layout.app')
 
-@section('content')
+@section('content') --}}
 
 
 <form action="/submit-form" method="POST">
@@ -35,4 +35,4 @@
 
 </form>
 
-@endsection
+{{-- @endsection --}}
