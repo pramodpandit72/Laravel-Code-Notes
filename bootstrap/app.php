@@ -13,7 +13,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->append(\App\Http\Middleware\GlobalMiddleware::class); // This is for Global Middleware
 
-        $middleware->alias(['ageCheck' =>  \App\Http\Middleware\BasicMiddleware::class]);  // This is for Route Middleware
+        $middleware->alias(['ageCheck' => \App\Http\Middleware\BasicMiddleware::class]);  // This is for Route Middleware
 
         $middleware->group('ageGroup',[\App\Http\Middleware\GroupMiddleware::class]);
     })
