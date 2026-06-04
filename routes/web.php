@@ -10,7 +10,12 @@ use App\Http\Controllers\SendEmail;
 use Illuminate\Http\Request;
 use App\Http\Controllers\DataRetrival;
 use App\Http\Controllers\BasicController;
+use App\Http\Controllers\QueryBuilder;
 
+Route::get('/insert', [QueryBuilder::class, 'insert']);
+Route::get('/show', [QueryBuilder::class, 'show']);
+Route::get('/update', [QueryBuilder::class, 'update']);
+Route::get('/delete', [QueryBuilder::class, 'delete']);
 
 
 // Route Middleware
@@ -82,10 +87,10 @@ Route::get('/show-form', [StudentFormController::class, 'showForm']);
 Route::post('/submit-form', [StudentFormController::class, 'submitForm']);
 
 
-Route::get('/insert', [StudentController::class, 'insert']);
-Route::get('/read', [StudentController::class, 'read']);
-Route::get('/update/{id}', [StudentController::class, 'update']);
-Route::get('/delete/{id}', [StudentController::class, 'delete']);
+// Route::get('/insert', [StudentController::class, 'insert']);
+// Route::get('/read', [StudentController::class, 'read']);
+// Route::get('/update/{id}', [StudentController::class, 'update']);
+// Route::get('/delete/{id}', [StudentController::class, 'delete']);
 
 // API
 Route::get('/get-quotes',[APIController::class, 'fetch']);
