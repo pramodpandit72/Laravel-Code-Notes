@@ -7,7 +7,7 @@
     @vite('resources/css/app.css')
     <title>My App</title>
 </head>
-<body>
+<body>                                 
 
     <header class="bg-green-600 text-white shadow-md">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
